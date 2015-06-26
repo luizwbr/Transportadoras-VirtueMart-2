@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<install version="1.5" type="plugin" group="vmshipment" method="upgrade">
+    <name>Transportadoras</name>
+    <creationDate>5 Abril 2013</creationDate>
+    <author>Luiz Felipe Weber</author>
+    <authorUrl>http://www.virtuemartpro.com.br</authorUrl>
+    <copyright>Copyright (C) 2013 Virtuemart PRO. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>1.0</version>
+    <description>    
+	&lt;div style=&quot;background:#E5F5FF;border:1px solid #99D6FF;padding:10px;margin:10px; -box-shadow: inset 0px 0px 10px #fff, 0px 0px 5px #ccc; -webkit-box-shadow: inset 0px 0px 10px #fff, 0px 0px 5px #ccc; -moz-box-shadow: inset 0px 0px 10px #fff, 0px 0px 5px #ccc;font-weight:normal;&quot;&gt;
+		&lt;h1&gt;Plugin Transportadoras VirtueMart 2.0.&lt;/h1&gt;
+		&lt;div&gt;Cadastre transportadoras como Braspress, Pacer, TNT Mercúrio.&lt;/div&gt;
+		&lt;div style=&quot;float:right;width: 20%&quot;&gt;
+		&lt;img src=&quot;../plugins/vmshipment/transportadoras/logo_transportadoras.png&quot; /&gt;
+		&lt;/div&gt;	
+
+	&lt;/div&gt;
+	&lt;div&gt;	Licença: &lt;a href=&quot;http://www.gnu.org/licenses/gpl-3.0.html&quot;&gt;GNU/GPL v3&lt;/a&gt; - Desenvolvido por Luiz Weber - &lt;a href=&quot;http://virtuemartpro.com.br&quot;&gt;VirtueMart PRO&lt;/a&gt; | &lt;a href=&quot;http://webgenium.com.br&quot;&gt;Webgenium System&lt;/a&gt;
+
+    </description>
+    <languages>
+		<language tag="en-GB">languages/en-GB.plg_vmshipment_transportadoras.ini</language>
+		<language tag="pt-BR">languages/pt-BR.plg_vmshipment_transportadoras.ini</language>
+    </languages>
+    <files>
+		<filename plugin="transportadoras">transportadoras.php</filename>
+		<filename>logo_transportadoras.png</filename>
+		<folder>languages</folder>
+    </files>
+    <params addpath="/administrator/components/com_virtuemart/elements">
+	<param type="vmjpluginwarning" />
+	<param type="spacer" default="VMSHIPMENT_TRANSPORTADORAS_PLUGIN" level="level1" />
+	<param	name="shipment_logos" type="vmfiles" label="VMSHIPMENT_TRANSPORTADORAS_LOGOS"
+             	description="VMSHIPMENT_TRANSPORTADORAS_LOGOS_DESC"
+             	directory="/images/stories/virtuemart/shipment"
+             	default="default" hide_default="1" hide_none="1"
+             	stripext="0"   exclude="^_" />
+
+	<param name="countries" type="vmcountries"  scope="com_virtuemart" default="" label="VMSHIPMENT_TRANSPORTADORAS_COUNTRIES" description="VMSHIPMENT_TRANSPORTADORAS_COUNTRIES_DESC"/>
+
+	<param name="zip_start" type="text" size="10" default="" label="VMSHIPMENT_TRANSPORTADORAS_ZIP_START" description="VMSHIPMENT_TRANSPORTADORAS_ZIP_START_DESC"/>
+
+	<param name="zip_stop" type="text" size="10" default="" label="VMSHIPMENT_TRANSPORTADORAS_ZIP_STOP" description="VMSHIPMENT_TRANSPORTADORAS_ZIP_STOP_DESC"/>
+
+	<param name="weight_start" type="text" size="10" default="" label="VMSHIPMENT_TRANSPORTADORAS_WEIGHT_START" description="VMSHIPMENT_TRANSPORTADORAS_WEIGHT_START_DESC"/>
+
+	<param name="weight_stop" type="text" size="10" default="" label="VMSHIPMENT_TRANSPORTADORAS_WEIGHT_STOP" description="VMSHIPMENT_TRANSPORTADORAS_WEIGHT_STOP_DESC"/>
+
+	<param name="weight_unit" type="vmweightunit" size="10" default="" label="VMSHIPMENT_TRANSPORTADORAS_WEIGHT_UNIT" description="VMSHIPMENT_TRANSPORTADORAS_WEIGHT_UNIT_DESC"/>
+
+	<param name="nbproducts_start" type="text" size="10" default="" label="VMSHIPMENT_TRANSPORTADORAS_NBPRODUCTS_START" description="VMSHIPMENT_TRANSPORTADORAS_NBPRODUCTS_START_DESC"/>
+
+	<param name="nbproducts_stop" type="text" size="10" default="" label="VMSHIPMENT_TRANSPORTADORAS_NBPRODUCTS_STOP" description="VMSHIPMENT_TRANSPORTADORAS_NBPRODUCTS_STOP_DESC"/>
+
+	<param name="orderamount_start" type="text" size="10" default="" label="VMSHIPMENT_TRANSPORTADORAS_ORDERAMOUNT_START" description="VMSHIPMENT_TRANSPORTADORAS_ORDERAMOUNT_START_DESC"/>
+
+	<param name="orderamount_stop" type="text" size="10" default="" label="VMSHIPMENT_TRANSPORTADORAS_ORDERAMOUNT_STOP" description="VMSHIPMENT_TRANSPORTADORAS_ORDERAMOUNT_STOP_DESC"/>
+
+    <param name="type_cost" type="list" default="0" label="VMSHIPMENT_TRANSPORTADORAS_TYPE_COST">
+        <option value="0">VMSHIPMENT_TRANSPORTADORAS_COST</option>
+        <option value="1">VMSHIPMENT_TRANSPORTADORAS_COST_PER_UN</option>
+    </param>
+
+	<param name="cost" type="text"   label="VMSHIPMENT_TRANSPORTADORAS_COST" description="VMSHIPMENT_TRANSPORTADORAS_COST_DESC" />
+	<param name="cost_per_un" type="text" label="VMSHIPMENT_TRANSPORTADORAS_COST_PER_UN" description="VMSHIPMENT_TRANSPORTADORAS_COST_PER_UN_DESC" />
+
+	<param name="package_fee" type="text"   label="VMSHIPMENT_TRANSPORTADORAS_PACKAGE_FEE" description="VMSHIPMENT_TRANSPORTADORAS_PACKAGE_FEE_DESC" />
+	<param name="tax_id" type="vmtaxes" scope="com_virtuemart"  label="VMSHIPMENT_TRANSPORTADORAS_TAX" description="VMSHIPMENT_TRANSPORTADORAS_TAX_DESC" />
+	<param name="free_shipment" type="text"    label="VMSHIPMENT_TRANSPORTADORAS_FREE_SHIPPING_AMOUNT" description="VMSHIPMENT_TRANSPORTADORAS_FREE_SHIPPING_AMOUNT_DESC" />
+    </params>
+
+</install>
